@@ -108,7 +108,9 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 	cache \
 	carrier \
 	data_mirror \
-	efs keyrefuge \
+	efs \
+	keydata \
+	keyrefuge \
 	linkerconfig \
 	metadata \
 	omr \
@@ -176,9 +178,9 @@ TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Test Vibration
