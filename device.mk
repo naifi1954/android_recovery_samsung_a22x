@@ -16,33 +16,26 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := current
 
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-recovery \
-    android.hardware.boot@1.1-impl \
-    android.hardware.boot@1.1-service
-
 # Debug
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
-# Sideload
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
+
 PRODUCT_PACKAGES += \
     otapreopt_script \
     update_engine \
     update_verifier \
     update_engine_sideload
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
-# health Hal
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
-# Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 

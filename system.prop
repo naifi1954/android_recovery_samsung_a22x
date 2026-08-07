@@ -1,7 +1,16 @@
+# Device release name
 ro.display.series=Samsung Galaxy A22 5G
+
+# product/board stuff
 ro.product.board=a22x
 ro.board.platform=mt6833
+
+# USB and MTP stuff
 sys.usb.controller=musb-hdrc
 ro.sys.usb.storage.type=mtp
+
+# Dynamic partition
 ro.boot.dynamic_partitions=true
+
+# Boot devices
 ro.boot.boot_devices=bootdevice,11230000.mmc,11270000.ufshci

@@ -1,16 +1,16 @@
 # Symlinked partitions
-/system_image	emmc		/dev/block/mapper/system							flags=backup=0;display="System Image";flashimg=1
+/system_image	        emmc		/dev/block/mapper/system							flags=backup=0;display="System Image";flashimg=1
 /system_ext_image	emmc		/dev/block/mapper/system_ext							flags=backup=0;display="System_ext Image";flashimg=1
-/vendor_image	emmc		/dev/block/mapper/vendor							flags=backup=0;display="Vendor Image";flashimg=1
-/product_image	emmc		/dev/block/mapper/product							flags=backup=0;display="Product Image";flashimg=1
+/vendor_image	        emmc		/dev/block/mapper/vendor							flags=backup=0;display="Vendor Image";flashimg=1
+/product_image	        emmc		/dev/block/mapper/product							flags=backup=0;display="Product Image";flashimg=1
 /odm_image		emmc		/dev/block/mapper/odm								flags=backup=0;display="Odm Image";flashimg=1
 
 # Physical partitions - Data
 /optics			ext4		/dev/block/by-name/optics							flags=display="Optics"
 /prism			ext4		/dev/block/by-name/prism							flags=display="Prism"
-/metadata		ext4		/dev/block/platform/bootdevice/by-name/metadata		flags=display="Metadata";wipeingui;wipeduringfactoryreset
+/metadata		ext4		/dev/block/platform/bootdevice/by-name/metadata		                        flags=display="Metadata";wipeingui;wipeduringfactoryreset
 /data			f2fs		/dev/block/by-name/userdata							flags=length=-16384
-/cache          ext4      	/dev/block/platform/bootdevice/by-name/cache      	flags=display="Cache";wipeingui;wipeduringfactoryreset
+/cache                  ext4	        /dev/block/platform/bootdevice/by-name/cache	                                flags=display="Cache";wipeingui;wipeduringfactoryreset
 
 
 # FOTA
@@ -22,7 +22,7 @@
 
 #Auto-generated code by FOTA Portal
 /gz1			emmc		/dev/block/by-name/gz1
-/optics_image	emmc		/dev/block/by-name/optics							flags=backup=1;display="Optics Image";flashimg=1
+/optics_image	        emmc		/dev/block/by-name/optics							flags=backup=1;display="Optics Image";flashimg=1
 /param			emmc		/dev/block/by-name/param							flags=backup=1;display="Param"
 
 
@@ -34,20 +34,20 @@
 /nvcfg			emmc		/dev/block/by-name/nvcfg							flags=backup=1;display="Nvcfg"
 /protect1		emmc		/dev/block/by-name/protect2							flags=backup=1;display="Protect2"
 /protect1		emmc		/dev/block/by-name/protect1							flags=backup=1;display="Protect1"
-/persistent		emmc		/dev/block/by-name/persistent						flags=backup=1;display="Persistent"
+/persistent		emmc		/dev/block/by-name/persistent						        flags=backup=1;display="Persistent"
 
 # CP Slot a.k.a baseband image
-/md1img			emmc		/dev/block/platform/bootdevice/by-name/md1img		flags=backup=1;display="Modem"
+/md1img			emmc		/dev/block/platform/bootdevice/by-name/md1img		                        flags=backup=1;display="Modem"
 
 # Physical partitions - Backupable
 /boot			emmc		/dev/block/by-name/boot								flags=backup=1;display="Boot Image";flashimg=1
 /recovery		emmc		/dev/block/by-name/recovery							flags=backup=1;display="Recovery Image";flashimg=1
-/prism_image	emmc		/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
+/prism_image	        emmc		/dev/block/by-name/prism							flags=backup=1;display="Prism Image";flashimg=1
 /up_param		emmc		/dev/block/by-name/up_param							flags=backup=1;display="up_param";flashimg=1
-/vbmeta     	   emmc      /dev/block/platform/bootdevice/by-name/vbmeta    		 flags=backup=1;display="Vbmeta";flashimg=1
-/vbmeta_system     emmc      /dev/block/platform/bootdevice/by-name/vbmeta_system    flags=backup=1;display="Vbmeta System";flashimg=1
-/vbmeta_vendor     emmc      /dev/block/platform/bootdevice/by-name/vbmeta_vendor    flags=backup=1;display="Vbmeta Vendor";flashimg=1
+/vbmeta	                emmc            /dev/block/platform/bootdevice/by-name/vbmeta		                        flags=backup=1;display="Vbmeta";flashimg=1
+/vbmeta_system          emmc            /dev/block/platform/bootdevice/by-name/vbmeta_system                            flags=backup=1;display="Vbmeta System";flashimg=1
+/vbmeta_vendor          emmc            /dev/block/platform/bootdevice/by-name/vbmeta_vendor                            flags=backup=1;display="Vbmeta Vendor";flashimg=1
 
 # External storage
-/external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=storage;wipeingui;removable
-/usb_otg		auto		/dev/block/sda1 		/dev/block/sda				flags=display="USB OTG";storage;wipeingui;removable
+/sdcard			sdfat		/dev/block/mmcblk1p1         /dev/block/mmcblk1			                flags=display="Micro SD Card";storage;wipeingui;removable
+/usb_otg		auto		/dev/block/sda1		     /dev/block/sda			                flags=display="USB OTG";storage;wipeingui;removable
